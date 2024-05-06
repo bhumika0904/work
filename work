@@ -1,0 +1,233 @@
+Html:
+ <html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIPKART</title>
+    <link rel="stylesheet" href="flipstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo">
+            <div class="logo"></div>
+        </div>
+        <div class="nav-search">
+            <input class="search" placeholder="Search Proudcts">
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass "></i>
+        </div>
+        <div class="nav-login">
+            <p class="login"></p><pre class="logging">    LOGIN  </pre><p></p>
+        </div>
+        <div class="seller">
+            <p class="text">BECOME A SELLER</p>
+        </div>
+        <div class="info">
+            <p class="text">more</p>
+        </div>
+        <div class="nav-cart ">
+            <i class="fa-solid fa-cart-shopping icon2"></i>
+            Cart
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="all">
+            <i class="fa-solid fa-bars"></i>
+            All
+        </div>
+        <div class="info-panel">
+            <p>deals</p>
+            <p>service</p>
+            <p>registration</p>
+        </div>
+        <div class="dealing">
+            shop deals
+        </div>
+    </div>
+    <div class="hero">
+    </div>
+    <div class="shopping">
+        <div class="box">
+            <h1>ELECTRONICS</h1>
+            <div class="eimage"></div>
+            <p class="view">VIEW ALL</p>
+        </div>
+        <div class="box">
+            <div class="item"></div>
+            <p class="iteminfo">From $500</p>
+            <p class="iteminfo">monitor</p>
+            <p class="iteminfo">dell</p>
+        </div>
+        <div class="box">
+            <div class="item2"></div>
+            <p class="iteminfo">From $600</p>
+            <p class="iteminfo">headphone</p>
+            <p class="iteminfo">boat</p>
+        </div>
+        <div class="box">
+            <div class="item3"></div>
+            <p class="iteminfo">From $800</p>
+            <p class="iteminfo">watch</p>
+            <p class="iteminfo">rolex</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+Css:
+*{
+    margin:0;
+    font-family:Arial;
+    border:border-box;
+}
+
+.navbar{
+    
+    height:55px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo{
+    height:50px;
+    width:100px;
+}
+.logo{
+    background-image: url("https://1000logos.net/wp-content/uploads/2021/02/Flipkart-logo.png");
+    width:100%;
+    height:50px;
+    background-size: cover;
+}
+
+.search{
+    width:560px;
+    height:35px;
+    text-align: center;
+}
+
+.icon{
+    border: 2px solid black;
+    width:30px;
+    height: 27px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-login{
+    width:100px;
+    height:40px;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border: 1px solid ;
+    
+    
+}
+
+.logging{
+    color:#2878f0;
+    
+    font-size: 16px;
+}
+
+.text{
+    color:white;
+    font-size: 16px;
+}
+
+.icon2{
+    width:15px;
+    height:15px;
+    
+}
+
+.nav-cart{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel{
+    height:40px;
+    background-color: aquamarine;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info-panel{
+    
+    width:70%;
+}
+
+.info-panel p{
+    display: inline;
+    margin-left:15px;
+}
+
+.hero{
+    background-image: url("https://media.istockphoto.com/id/1341621758/vector/shopping-online-on-phone-with-podium-paper-art-modern-background-gifts-box-illustration.jpg?s=612x612&w=0&k=20&c=pcF7zW702nySNfEfiRl1UJ8H5mPc5k7Yr9-NS-mZTIk=");
+    height:600px;
+    background-size: cover;
+}
+
+.box{
+    width:23%;
+    height:300px;
+    border:1px solid black;
+}
+
+.shopping{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:20px;
+}
+
+.eimage{
+    background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+    height:260px;
+    width:100%;
+}
+
+.view{
+    background-color: #2878f0;
+    border: 1px solid white;
+    margin-top: -120px;
+    margin-left: 10px;
+    width:90px;
+    height:40px;
+    justify-content: center;
+    text-align: center;
+    color:white;
+}
+
+.item{
+    background-image: url("https://rukminim2.flixcart.com/image/200/200/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70");
+    width:100%;
+    height:200px;
+    background-size: cover;
+}
+
+.item2{
+    background-image: url("https://rukminim2.flixcart.com/image/200/200/kokdci80/dslr-camera/v/e/x/z-24-200mm-z5-nikon-original-imag2zuekuxgxsgg.jpeg?q=70");
+    width:100%;
+    height:200px;
+    background-size: cover;
+}
+
+.item3{
+    width:100%;
+    height:200px;
+    background-size: cover;
+    background-image: url("https://rukminim2.flixcart.com/image/200/200/kx50gi80/projector/r/9/p/zeb-pixa-play-12-5-6-dobly-audio-led-projector-zebronics-original-imag9z3yujqmzqt4.jpeg?q=70");
+}
+
