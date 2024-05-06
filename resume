@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="styleportfolio.css">
+</head>
+<body>
+    <img src="C:\Users\91828\OneDrive\Desktop\Bhumika Doc\Bhumika Pics\Bhumika Photo .jpg" alt="Bhumika's Image">
+    <h1>Bhumika Gupta</h1>
+    <p>I AM A STUDENT OF AMITY UNIVERSITY, NOIDA</p>
+    <p>I AM A MEMBER OF THE WEBSITE DEVELOPMENT CORE TEAM OF CODECAMPERS</p>
+    <p>I LOVE WEB DEVELOPMENT</p>
+    <hr>
+    <h2>EDUCATIONAL QUALIFICATION</h2>
+    <table>
+        <tr>
+            <th>COURSE</th>
+            <th>INSTITUTE</th>
+            <th>YEAR</th>
+            <th>RESULT</th>
+        </tr>
+        <tr>
+            <td>CSE CORE</td>
+            <td>AMITY UNIVERSITY</td>
+            <td>2023-2027</td>
+            <td>SEM-1:8.45</td>
+        </tr>
+        <tr>
+            <td>12<sup>th</sup> GRADE</td>
+            <td>ST.CPS</td>
+            <td>2011-2023</td>
+            <td>91.6</td>
+        </tr>
+    </table>
+    <h2>INTERNSHIPS</h2>
+    <p>ABC</p>
+    <p>ADC</p>
+    <p>AEC</p>
+    <ul>
+        <li>jgcli   uegch   wueghfwgecbjdgfl    iwegbg  whgugk,gfvkiurb</li>
+        <li>aefjgithvjn orfh verkn oeijgie ikirji jrhge </li>
+    </ul>
+    <h2>PROJECTS</h2>
+    <h3>1)hacking</h3>
+    <ul>
+        <li>fwiebjfiuweb jhdgfir buieurhf hgfueia</li>
+    </ul>
+    <h3>2)development</h3>
+    <ul>
+        <li>jrhgiuerbu hveirughv iuhrg </li>
+    </ul>
+    <hr>
+    <h2>CONNECT WITH ME</h2>
+    <p>email: bhumika</p>
+    <p>contact: 9083249273</p>
+</body>
+</html>
+
+img{
+    width:280px;
+    height:280px;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
