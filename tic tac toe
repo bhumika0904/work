@@ -1,0 +1,207 @@
+Html: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylejs.css"/>
+</head>
+<body>
+    
+    <main>
+        <h1 class="heading">
+            TIC TAC TOE!
+        </h1>
+        
+        <div class="winner hide">
+            <p id="win"></p>
+        </div>
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <div class="functional-container">
+            <button class="functional">START NEW GAME</button>
+            <button class="functional2">RESTART GAME</button>
+         </div>
+        <script src="tic tac toe.js"></script>
+    </main>
+</body>
+</html>
+
+ 
+Css:
+body{
+    background-color: sandybrown;
+}
+
+h1{
+    color:black;
+    text-align: center;
+    
+}
+
+.container{
+    height:70vh;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height:60vmin;
+    width:60vmin;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    height:18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    font-size: 8vmin;
+    background-color: white;
+    border-color: black;
+    color:brown;
+}
+
+.functional, .functional2 {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 5px;
+}
+
+.functional-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#win{
+    color: brown;
+    font-size: 40px;
+}
+
+.hide{
+    display: none;
+    font-size: 40px;
+}
+
+.winner{
+    height:8vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+Js:
+let boxes=document.querySelectorAll(".box");
+let resetbtn=document.querySelectorAll(".functional2");
+let newbtn=document.querySelectorAll(".functional");
+let msg=document.querySelector("#win");
+let msgContainer=document.querySelector(".winner");
+let count=0;
+let turnO=true;
+const patterns=[
+    [0,1,2],
+    [0,3,6],
+    [0,4,8],
+    [1,4,7],
+    [2,5,8],
+    [2,4,6],
+    [3,4,5],
+    [6,7,8],
+];
+
+boxes.forEach((box) => {
+    box.addEventListener("click",() => {
+        
+    if(turnO===true){
+        box.innerText="O";
+        turnO=false;
+    } else{
+        box.innerText="X";
+        turnO=true;
+    }
+    box.disabled=true;
+    count++;
+    let winWin=checkWinner();
+    if(count===9 && !winWin){
+        gameOver();
+    }
+    });
+});
+
+const disabling=()=>{
+    for (let box of boxes){
+        box.disabled=true;
+    }
+};
+
+const enable=()=>{
+    for(let box of boxes){
+        box.disabled=false;
+        box.innerText="";
+    }
+}
+
+const gameOver = () => {
+    msg.innerText = `GAME IS A DRAW.`;
+    msgContainer.classList.remove("hide");
+    disabling();
+};
+
+const msgWin=(winner)=>{
+    msg.innerText=(`WINNER IS ${winner}`);
+    msgContainer.classList.remove("hide");
+    disabling();
+};
+
+const reset=()=>{
+    turnO=true;
+    enable();
+    msgContainer.classList.add("hide");
+    
+};
+
+const checkWinner = () =>{
+    for (let a of patterns){
+       let posVal1=boxes[a[0]].innerText;
+       let posVal2=boxes[a[1]].innerText;
+       let posVal3=boxes[a[2]].innerText;
+       if(posVal1 != "" && posVal2!="" && posVal3!="") {
+        if(posVal1===posVal2 && posVal1===posVal3 && posVal2===posVal3){
+            console.log("WINNER",posVal1);
+            msgWin(posVal1);
+        }
+       }
+    }
+};
+resetbtn.forEach((btn) => {
+    btn.addEventListener("click", reset);
+});
+
+newbtn.forEach((btn) => {
+    btn.addEventListener("click", reset);
+});
+
+
